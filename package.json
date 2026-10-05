@@ -1,0 +1,64 @@
+{
+  "name": "pi-claude-oauth",
+  "version": "0.3.0",
+  "type": "module",
+  "files": [
+    "extensions",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "description": "Use a Claude Pro or Max subscription with Pi through Pi's built-in Anthropic OAuth login.",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "anthropic",
+    "claude",
+    "claude-code",
+    "oauth"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HugoLopes45/pi-claude-oauth.git"
+  },
+  "homepage": "https://github.com/HugoLopes45/pi-claude-oauth#readme",
+  "bugs": {
+    "url": "https://github.com/HugoLopes45/pi-claude-oauth/issues"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "echo 'nothing to build'",
+    "check": "tsc --noEmit && vitest --run",
+    "test": "vitest --run",
+    "prepack": "npm run check"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-agent-core": "*",
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-agent-core": {
+      "optional": true
+    },
+    "@earendil-works/pi-ai": {
+      "optional": true
+    },
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@earendil-works/pi-agent-core": "^0.99.1",
+    "@earendil-works/pi-ai": "^0.99.1",
+    "@earendil-works/pi-coding-agent": "^0.99.1",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.1.11"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions/index.ts"
+    ]
+  }
+}
